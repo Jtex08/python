@@ -2,11 +2,18 @@
 
 
 def power(num, pwr):
-    pass
+    # breaking condition: if we reach zero, return 1
+    if pwr == 0:
+        return 1
+    else:
+        return num * power(num, pwr-1)
 
 
 def factorial(num):
-    pass
+    if (num == 0):
+        return 1
+    else:
+        return num * factorial(num-1)
 
 
 print("{} to the power of {} is {}".format(5, 3, power(5, 3)))
